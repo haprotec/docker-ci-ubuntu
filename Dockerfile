@@ -16,7 +16,7 @@ RUN dpkg -i ./gitsemver.deb && rm gitsemver.deb
 
 # Add haprotec Python library
 RUN cd /usr/local/lib && \
-    git clone https://gitlab.com/haprotec/haprotec-python-lib.git \
+    git clone https://gitlab.com/haprotec/haprotec-python-lib.git && \
     pip3 install -e ./haprotec-python-lib && \
     cd /
 
