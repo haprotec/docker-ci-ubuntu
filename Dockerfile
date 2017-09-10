@@ -12,12 +12,12 @@ RUN apt-get update -q && apt-get install -yq --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Install gitsemver
-ADD https://downloads.haprotec.de/gitsemver/gitsemver.deb /
+ADD http://downloads.haprotec.de/gitsemver/gitsemver.deb /
 RUN dpkg -i ./gitsemver.deb && rm gitsemver.deb
 
 # Add haprotec Python library
 RUN cd /usr/local/lib && \
-    git clone https://gitlab.com/haprotec/haprotec-python-lib.git && \
+    git clone http://gitlab.com/haprotec/haprotec-python-lib.git && \
     pip3 install -e ./haprotec-python-lib && \
     cd /
 
