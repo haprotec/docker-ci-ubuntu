@@ -7,6 +7,7 @@ RUN apt-get update -q && apt-get install -yq --no-install-recommends \
     mono-complete \
     python3 \
     python3-pip \
+    python3-setuptools \
     wget \
     && rm -rf /var/lib/apt/lists/*
 
