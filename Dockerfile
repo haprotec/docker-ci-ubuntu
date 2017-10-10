@@ -9,6 +9,8 @@ RUN apt-get update -q && apt-get install -yq --no-install-recommends \
     python3-pip \
     python3-setuptools \
     wget \
+    zip \
+    unzip \
     && rm -rf /var/lib/apt/lists/*
 
 # Install gitsemver
