@@ -3,6 +3,7 @@ FROM ubuntu:latest
 RUN apt-get update -q && apt-get install -yq --no-install-recommends \
     build-essential \
     ca-certificates \
+    curl \
     git \
     mono-complete \
     python3 \
@@ -11,6 +12,11 @@ RUN apt-get update -q && apt-get install -yq --no-install-recommends \
     wget \
     zip \
     unzip \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install nodejs
+RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - \
+    && apt-get install -yq nodejs --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Install gitsemver
